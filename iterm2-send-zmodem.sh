@@ -15,7 +15,7 @@ if [[ $FILE = "" ]]; then
 	echo
 	echo \# Cancelled transfer
 else
-	/usr/local/bin/sz "$FILE" -e -b
+	/usr/local/bin/sz "$FILE" --escape --binary --bufsize 4096
 	sleep 1
 	echo
 	echo \# Received $FILE
